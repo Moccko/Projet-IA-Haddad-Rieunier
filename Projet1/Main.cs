@@ -39,5 +39,15 @@ namespace Projet1
 
             }
         }
+
+        private void DijkstraBtn_Click(object sender, EventArgs e)
+        {
+            ExoDijkstra questionnaire = new ExoDijkstra();
+            DialogResult result = questionnaire.ShowDialog();
+            if (result == DialogResult.Cancel || result == DialogResult.OK)
+            {
+
+            }
+        }
     }
 }

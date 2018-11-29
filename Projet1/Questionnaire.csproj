@@ -53,6 +53,12 @@
     <Compile Include="CreerQuestion.Designer.cs">
       <DependentUpon>CreerQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExoDijkstra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExoDijkstra.Designer.cs">
+      <DependentUpon>ExoDijkstra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <EmbeddedResource Include="CreerQuestion.resx">
       <DependentUpon>CreerQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExoDijkstra.resx">
+      <DependentUpon>ExoDijkstra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
