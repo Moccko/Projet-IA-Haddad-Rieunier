@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projet1
+namespace ProjetIA
 {
 
     public partial class ExoDijkstra : Form
@@ -99,6 +99,5 @@ namespace Projet1
         {
             MessageBox.Show(CompareTreeViews(DijkstraTV.TopNode, CompareTV.TopNode) ? "égaux" : "différents");
         }
-
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Projet1
+namespace ProjetIA
 {
     [Serializable]
     public class Question

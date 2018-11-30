@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-namespace Projet1
+namespace ProjetIA
 {
 
     public partial class Questionnaire : Form
@@ -32,7 +32,9 @@ namespace Projet1
             InitializeComponent();
 
             StreamReader reader = new StreamReader("questions.xml");
-            Questions = new Queue<Question>((List<Question>)new XmlSerializer(typeof(List<Question>)).Deserialize(reader));
+            List<Question> questions = (List<Question>)new XmlSerializer(typeof(List<Question>)).Deserialize(reader);
+            questions.Shuffle();
+            Questions = new Queue<Question>(questions);
             reader.Close();
 
             BonnesReponses = 0;

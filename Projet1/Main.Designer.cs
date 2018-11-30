@@ -1,4 +1,4 @@
-﻿namespace Projet1
+﻿namespace ProjetIA
 {
     partial class Main
     {
@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.DijkstraBtn = new System.Windows.Forms.Button();
+            this.AEtoile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -55,7 +56,7 @@
             // 
             // DijkstraBtn
             // 
-            this.DijkstraBtn.Location = new System.Drawing.Point(270, 336);
+            this.DijkstraBtn.Location = new System.Drawing.Point(188, 338);
             this.DijkstraBtn.Name = "DijkstraBtn";
             this.DijkstraBtn.Size = new System.Drawing.Size(75, 23);
             this.DijkstraBtn.TabIndex = 3;
@@ -63,11 +64,22 @@
             this.DijkstraBtn.UseVisualStyleBackColor = true;
             this.DijkstraBtn.Click += new System.EventHandler(this.DijkstraBtn_Click);
             // 
+            // AEtoile
+            // 
+            this.AEtoile.Location = new System.Drawing.Point(316, 338);
+            this.AEtoile.Name = "AEtoile";
+            this.AEtoile.Size = new System.Drawing.Size(75, 23);
+            this.AEtoile.TabIndex = 4;
+            this.AEtoile.Text = "A*";
+            this.AEtoile.UseVisualStyleBackColor = true;
+            this.AEtoile.Click += new System.EventHandler(this.AEtoile_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 431);
+            this.Controls.Add(this.AEtoile);
             this.Controls.Add(this.DijkstraBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button DijkstraBtn;
+        private System.Windows.Forms.Button AEtoile;
     }
 }
 

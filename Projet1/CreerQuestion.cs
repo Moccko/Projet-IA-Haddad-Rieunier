@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-namespace Projet1
+namespace ProjetIA
 {
     public partial class CreerQuestion : Form
     {

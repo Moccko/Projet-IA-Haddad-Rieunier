@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Projet1.Properties {
+namespace ProjetIA.Properties {
     using System;
     
     

@@ -11,7 +11,7 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Projet1
+namespace ProjetIA
 {
     public partial class Main : Form
     {
@@ -43,6 +43,16 @@ namespace Projet1
         private void DijkstraBtn_Click(object sender, EventArgs e)
         {
             ExoDijkstra questionnaire = new ExoDijkstra();
+            DialogResult result = questionnaire.ShowDialog();
+            if (result == DialogResult.Cancel || result == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void AEtoile_Click(object sender, EventArgs e)
+        {
+            AEtoileSalotti questionnaire = new AEtoileSalotti();
             DialogResult result = questionnaire.ShowDialog();
             if (result == DialogResult.Cancel || result == DialogResult.OK)
             {

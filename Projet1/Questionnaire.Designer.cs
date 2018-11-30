@@ -1,4 +1,4 @@
-﻿namespace Projet1
+﻿namespace ProjetIA
 {
     partial class Questionnaire
     {
