@@ -52,7 +52,7 @@ namespace ProjetIA
 
         public override string ToString()
         {
-            return Convert.ToString(numero);
+            return AEtoileSalotti.ALPHABET[numero].ToString();
         }
     }
 }

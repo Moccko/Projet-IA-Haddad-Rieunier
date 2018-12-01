@@ -18,29 +18,46 @@ namespace ProjetIA
         static public int nbnodes = 10;
         static public int numinitial;
         static public int numfinal;
+        public static string ALPHABET { get { return "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; } private set { } }
+        private List<char> Ouverts = new List<char>();
+        private List<char> Fermes = new List<char>();
+
+        private void CreerBoutons(int nb, ListBox lb, FlowLayoutPanel flb, List<char> noeuds, string name)
+        {
+            for (int i = 0; i < nb; i++)
+            {
+                Button bouton = new Button();
+                bouton.Name = name + i;
+                bouton.Size = new Size(28, 23);
+                bouton.TabIndex = 10 + i;
+                bouton.Text = ALPHABET[i].ToString();
+                bouton.UseVisualStyleBackColor = true;
+                bouton.Click += (sender, e) => OuvertFermeBtn_Click(sender, e, lb, noeuds);
+                flb.Controls.Add(bouton);
+            }
+            lb.Items.Add("{  }");
+        }
+        private void OuvertFermeBtn_Click(object sender, EventArgs e, ListBox lb, List<char> noeuds)
+        {
+            //int index = ALPHABET.IndexOf(((Button)sender).Text);
+            //if (noeuds.Contains(index))
+            //    noeuds.Remove(index);
+            //else
+            //    noeuds.Add(index);
+            char letter = ((Button)sender).Text[0];
+            if (noeuds.Contains(letter))
+                noeuds.Remove(letter);
+            else
+                noeuds.Add(letter);
+            lb.Items[lb.Items.Count - 1] = "{ " + noeuds.Aggregate("", (list, x) => list + (list == "" ? "" : ", ") + x.ToString()) + " }";
+        }
 
         public AEtoileSalotti()
         {
             InitializeComponent();
         }
 
-        private void init1_Click(object sender, EventArgs e)
-        {
-            matrice = new double[nbnodes, nbnodes];
-            for (int i = 0; i < nbnodes; i++)
-                for (int j = 0; j < nbnodes; j++)
-                    matrice[i, j] = -1;
-
-            matrice[0, 1] = 3; matrice[1, 0] = 3;
-            matrice[0, 2] = 5; matrice[2, 0] = 5;
-            matrice[0, 3] = 7; matrice[3, 0] = 7;
-            matrice[1, 4] = 8; matrice[4, 1] = 8;
-            matrice[2, 4] = 3; matrice[4, 2] = 3;
-            matrice[4, 5] = 7; matrice[5, 4] = 7;
-            matrice[5, 6] = 4; matrice[6, 5] = 4;
-        }
-
-        private void init2_Click(object sender, EventArgs e)
+        private void init_Click(object sender, EventArgs e)
         {
             StreamReader monStreamReader = new StreamReader("graphe1.txt");
 
@@ -58,6 +75,10 @@ namespace ProjetIA
                 i++;
             }
             nbnodes = Convert.ToInt32(strnbnoeuds);
+
+            // CREATION DE BOUTONS
+            CreerBoutons(nbnodes, UserFermesLB, FermesFLP, Fermes, "FermesBtn");
+            CreerBoutons(nbnodes, UserOuvertsLB, OuvertsFLP, Ouverts, "OuvertsBtn");
 
             matrice = new double[nbnodes, nbnodes];
             for (i = 0; i < nbnodes; i++)
@@ -134,6 +155,18 @@ namespace ProjetIA
             }
 
             g.GetSearchTree(treeView1);
+        }
+
+        private void ValiderLigneBtn_Click(object sender, EventArgs e)
+        {
+            int rang = UserOuvertsLB.Items.Count - 1;
+            string ouverts = UserOuvertsLB.Items[rang].ToString() == OuvertsLB.Items[rang].ToString() ? "juste" : "faux";
+            string fermes = UserFermesLB.Items[rang].ToString() == FermesLB.Items[rang].ToString() ? "juste" : "faux";
+            MessageBox.Show($"Fermés : {fermes}     Ouverts : {ouverts}");
+            Ouverts.Clear();
+            Fermes.Clear();
+            UserOuvertsLB.Items.Add("{  }");
+            UserFermesLB.Items.Add("{  }");
         }
     }
 }

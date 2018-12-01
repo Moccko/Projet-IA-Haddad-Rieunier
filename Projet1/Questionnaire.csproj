@@ -109,6 +109,9 @@
     <EmbeddedResource Include="Questionnaire.resx">
       <DependentUpon>Questionnaire.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\questions.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

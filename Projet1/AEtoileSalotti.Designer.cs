@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.init1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.AEtoile = new System.Windows.Forms.Button();
@@ -36,23 +35,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.init2 = new System.Windows.Forms.Button();
+            this.init = new System.Windows.Forms.Button();
             this.listBoxgraphe = new System.Windows.Forms.ListBox();
             this.OuvertsLB = new System.Windows.Forms.ListBox();
             this.OuvertsLabel = new System.Windows.Forms.Label();
             this.FermesLB = new System.Windows.Forms.ListBox();
             this.FermesLabel = new System.Windows.Forms.Label();
+            this.UserOuvertsLB = new System.Windows.Forms.ListBox();
+            this.UserFermesLB = new System.Windows.Forms.ListBox();
+            this.UserFLb = new System.Windows.Forms.Label();
+            this.UserOLb = new System.Windows.Forms.Label();
+            this.OuvertsFLP = new System.Windows.Forms.FlowLayoutPanel();
+            this.FermesFLP = new System.Windows.Forms.FlowLayoutPanel();
+            this.ValiderLigneBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // init1
-            // 
-            this.init1.Location = new System.Drawing.Point(35, 22);
-            this.init1.Name = "init1";
-            this.init1.Size = new System.Drawing.Size(75, 23);
-            this.init1.TabIndex = 0;
-            this.init1.Text = "Init1";
-            this.init1.UseVisualStyleBackColor = true;
-            this.init1.Click += new System.EventHandler(this.init1_Click);
             // 
             // textBox1
             // 
@@ -113,15 +109,15 @@
             this.treeView1.Size = new System.Drawing.Size(152, 180);
             this.treeView1.TabIndex = 7;
             // 
-            // init2
+            // init
             // 
-            this.init2.Location = new System.Drawing.Point(35, 67);
-            this.init2.Name = "init2";
-            this.init2.Size = new System.Drawing.Size(75, 23);
-            this.init2.TabIndex = 8;
-            this.init2.Text = "Init2";
-            this.init2.UseVisualStyleBackColor = true;
-            this.init2.Click += new System.EventHandler(this.init2_Click);
+            this.init.Location = new System.Drawing.Point(34, 38);
+            this.init.Name = "init";
+            this.init.Size = new System.Drawing.Size(75, 23);
+            this.init.TabIndex = 8;
+            this.init.Text = "Init";
+            this.init.UseVisualStyleBackColor = true;
+            this.init.Click += new System.EventHandler(this.init_Click);
             // 
             // listBoxgraphe
             // 
@@ -135,15 +131,15 @@
             // OuvertsLB
             // 
             this.OuvertsLB.FormattingEnabled = true;
-            this.OuvertsLB.Location = new System.Drawing.Point(336, 296);
+            this.OuvertsLB.Location = new System.Drawing.Point(575, 291);
             this.OuvertsLB.Name = "OuvertsLB";
-            this.OuvertsLB.Size = new System.Drawing.Size(127, 147);
+            this.OuvertsLB.Size = new System.Drawing.Size(88, 147);
             this.OuvertsLB.TabIndex = 10;
             // 
             // OuvertsLabel
             // 
             this.OuvertsLabel.AutoSize = true;
-            this.OuvertsLabel.Location = new System.Drawing.Point(333, 280);
+            this.OuvertsLabel.Location = new System.Drawing.Point(572, 275);
             this.OuvertsLabel.Name = "OuvertsLabel";
             this.OuvertsLabel.Size = new System.Drawing.Size(44, 13);
             this.OuvertsLabel.TabIndex = 11;
@@ -152,31 +148,96 @@
             // FermesLB
             // 
             this.FermesLB.FormattingEnabled = true;
-            this.FermesLB.Location = new System.Drawing.Point(171, 296);
+            this.FermesLB.Location = new System.Drawing.Point(465, 291);
             this.FermesLB.Name = "FermesLB";
-            this.FermesLB.Size = new System.Drawing.Size(128, 147);
+            this.FermesLB.Size = new System.Drawing.Size(89, 147);
             this.FermesLB.TabIndex = 12;
             // 
             // FermesLabel
             // 
             this.FermesLabel.AutoSize = true;
-            this.FermesLabel.Location = new System.Drawing.Point(168, 280);
+            this.FermesLabel.Location = new System.Drawing.Point(462, 275);
             this.FermesLabel.Name = "FermesLabel";
             this.FermesLabel.Size = new System.Drawing.Size(41, 13);
             this.FermesLabel.TabIndex = 13;
             this.FermesLabel.Text = "Fermés";
             // 
-            // Form1
+            // UserOuvertsLB
+            // 
+            this.UserOuvertsLB.FormattingEnabled = true;
+            this.UserOuvertsLB.Location = new System.Drawing.Point(362, 291);
+            this.UserOuvertsLB.Name = "UserOuvertsLB";
+            this.UserOuvertsLB.Size = new System.Drawing.Size(97, 147);
+            this.UserOuvertsLB.TabIndex = 14;
+            // 
+            // UserFermesLB
+            // 
+            this.UserFermesLB.FormattingEnabled = true;
+            this.UserFermesLB.Location = new System.Drawing.Point(12, 291);
+            this.UserFermesLB.Name = "UserFermesLB";
+            this.UserFermesLB.Size = new System.Drawing.Size(97, 147);
+            this.UserFermesLB.TabIndex = 15;
+            // 
+            // UserFLb
+            // 
+            this.UserFLb.AutoSize = true;
+            this.UserFLb.Location = new System.Drawing.Point(13, 274);
+            this.UserFLb.Name = "UserFLb";
+            this.UserFLb.Size = new System.Drawing.Size(41, 13);
+            this.UserFLb.TabIndex = 16;
+            this.UserFLb.Text = "Fermés";
+            // 
+            // UserOLb
+            // 
+            this.UserOLb.AutoSize = true;
+            this.UserOLb.Location = new System.Drawing.Point(362, 273);
+            this.UserOLb.Name = "UserOLb";
+            this.UserOLb.Size = new System.Drawing.Size(44, 13);
+            this.UserOLb.TabIndex = 17;
+            this.UserOLb.Text = "Ouverts";
+            // 
+            // OuvertsFLP
+            // 
+            this.OuvertsFLP.Location = new System.Drawing.Point(286, 291);
+            this.OuvertsFLP.Name = "OuvertsFLP";
+            this.OuvertsFLP.Size = new System.Drawing.Size(70, 147);
+            this.OuvertsFLP.TabIndex = 33;
+            // 
+            // FermesFLP
+            // 
+            this.FermesFLP.Location = new System.Drawing.Point(116, 291);
+            this.FermesFLP.Name = "FermesFLP";
+            this.FermesFLP.Size = new System.Drawing.Size(68, 147);
+            this.FermesFLP.TabIndex = 34;
+            // 
+            // ValiderLigneBtn
+            // 
+            this.ValiderLigneBtn.Location = new System.Drawing.Point(191, 414);
+            this.ValiderLigneBtn.Name = "ValiderLigneBtn";
+            this.ValiderLigneBtn.Size = new System.Drawing.Size(89, 23);
+            this.ValiderLigneBtn.TabIndex = 35;
+            this.ValiderLigneBtn.Text = "Valider ligne";
+            this.ValiderLigneBtn.UseVisualStyleBackColor = true;
+            this.ValiderLigneBtn.Click += new System.EventHandler(this.ValiderLigneBtn_Click);
+            // 
+            // AEtoileSalotti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 450);
+            this.Controls.Add(this.ValiderLigneBtn);
+            this.Controls.Add(this.FermesFLP);
+            this.Controls.Add(this.OuvertsFLP);
+            this.Controls.Add(this.UserOLb);
+            this.Controls.Add(this.UserFLb);
+            this.Controls.Add(this.UserFermesLB);
+            this.Controls.Add(this.UserOuvertsLB);
             this.Controls.Add(this.FermesLabel);
             this.Controls.Add(this.FermesLB);
             this.Controls.Add(this.OuvertsLabel);
             this.Controls.Add(this.OuvertsLB);
             this.Controls.Add(this.listBoxgraphe);
-            this.Controls.Add(this.init2);
+            this.Controls.Add(this.init);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
@@ -184,8 +245,7 @@
             this.Controls.Add(this.AEtoile);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.init1);
-            this.Name = "Form1";
+            this.Name = "AEtoileSalotti";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,8 +253,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button init1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button AEtoile;
@@ -202,12 +260,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Button init2;
+        private System.Windows.Forms.Button init;
         private System.Windows.Forms.ListBox listBoxgraphe;
         private System.Windows.Forms.ListBox OuvertsLB;
         private System.Windows.Forms.Label OuvertsLabel;
         private System.Windows.Forms.ListBox FermesLB;
         private System.Windows.Forms.Label FermesLabel;
+        private System.Windows.Forms.ListBox UserOuvertsLB;
+        private System.Windows.Forms.ListBox UserFermesLB;
+        private System.Windows.Forms.Label UserFLb;
+        private System.Windows.Forms.Label UserOLb;
+        private System.Windows.Forms.FlowLayoutPanel OuvertsFLP;
+        private System.Windows.Forms.FlowLayoutPanel FermesFLP;
+        private System.Windows.Forms.Button ValiderLigneBtn;
     }
 }
 
