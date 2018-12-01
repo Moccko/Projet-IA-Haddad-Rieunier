@@ -44,9 +44,11 @@ namespace ProjetIA
             BonnesReponses = 0;
             NbQuestions = Questions.Count + 1;
 
-            NumeroQuestionDijkstra = Random.Next(NbQuestions);
+            NumeroQuestionDijkstra = Random.Next(1, NbQuestions - 1);
 
             BonnesReponsesLb.Text += $" / {NbQuestions}";
+
+            UpdateScore();
 
             UpdateView();
         }
@@ -79,12 +81,18 @@ namespace ProjetIA
                 }
             }
 
-            BonnesReponsesLb.Text = (BonnesReponses > 1 ? $"{BonnesReponses} bonnes réponses" : $"{BonnesReponses} bonne réponse") + $" / {NbQuestions}";
+            UpdateScore();
 
             if (Questions.Count == 0)
             {
                 ValiderBtn.Text = "Terminer";
             }
+        }
+
+        private void UpdateScore()
+        {
+            // +2 pour l'exo Dijkstra
+            BonnesReponsesLb.Text = (BonnesReponses > 1 ? $"{BonnesReponses} bonnes réponses" : $"{BonnesReponses} bonne réponse") + $" / {NbQuestions + 3}";
         }
 
         private void QuestionSuivante()
@@ -99,11 +107,14 @@ namespace ProjetIA
 
             if (NoQuestion == NumeroQuestionDijkstra)
             {
-                AEtoileSalotti dijkstra = new AEtoileSalotti();
-                if (dijkstra.DialogResult == DialogResult.OK)
+                Dijkstra dijkstra = new Dijkstra();
+                if (dijkstra.ShowDialog() == DialogResult.OK)
                 {
+                    NoQuestionLb.Text = $"Question {NoQuestion += 2} sur {NbQuestions}";
                     BonnesReponses += dijkstra.Score;
+                    UpdateScore();
                 }
+                NoQuestion++;
             }
 
             // On affiche la question suivante

@@ -21,21 +21,21 @@ namespace ProjetIA
         public override double GetArcCost(GenericNode N2)
         {
             Node2 N2bis = (Node2)N2;
-            return AEtoileSalotti.matrice[numero, N2bis.numero];
+            return Dijkstra.matrice[numero, N2bis.numero];
         }
 
         public override bool EndState()
         {
-            return (numero == AEtoileSalotti.numfinal);
+            return (numero == Dijkstra.numfinal);
         }
 
         public override List<GenericNode> GetListSucc()
         {
             List<GenericNode> lsucc = new List<GenericNode>();
 
-            for (int i = 0; i < AEtoileSalotti.nbnodes; i++)
+            for (int i = 0; i < Dijkstra.nbnodes; i++)
             {
-                if (AEtoileSalotti.matrice[numero, i] != -1)
+                if (Dijkstra.matrice[numero, i] != -1)
                 {
                     Node2 newnode2 = new Node2();
                     newnode2.numero = i;
@@ -52,7 +52,7 @@ namespace ProjetIA
 
         public override string ToString()
         {
-            return AEtoileSalotti.ALPHABET[numero].ToString();
+            return Dijkstra.ALPHABET[numero].ToString();
         }
     }
 }

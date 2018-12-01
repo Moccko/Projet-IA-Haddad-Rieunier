@@ -42,7 +42,7 @@ namespace ProjetIA
 
         private void AEtoile_Click(object sender, EventArgs e)
         {
-            AEtoileSalotti questionnaire = new AEtoileSalotti();
+            Dijkstra questionnaire = new Dijkstra();
             DialogResult result = questionnaire.ShowDialog();
             if (result == DialogResult.Cancel || result == DialogResult.OK)
             {

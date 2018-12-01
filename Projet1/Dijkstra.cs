@@ -12,7 +12,7 @@ using System.IO;
 
 namespace ProjetIA
 {
-    public partial class AEtoileSalotti : Form
+    public partial class Dijkstra : Form
     {
         static public double[,] matrice;
         static public int nbnodes = 10;
@@ -28,9 +28,7 @@ namespace ProjetIA
 
         public int Score { get { return ScoreOF + ScoreAF; } private set { Score = value; } }
 
-        private int Points = 0;
-
-        public AEtoileSalotti()
+        public Dijkstra()
         {
             InitializeComponent();
             Init();
@@ -161,8 +159,9 @@ namespace ProjetIA
                      + "   : " + Convert.ToString(matrice[N1.numero, N2.numero]));
                 N1 = N2;
             }
-
             g.GetSearchTree(treeView1);
+            treeView1.Nodes[0].Text = ALPHABET[numinitial].ToString();
+            treeView1.SelectedNode = treeView1.Nodes[0];
         }
 
         private void CreerBoutons(int nb, ListBox lb, FlowLayoutPanel flb, List<char> noeuds, string name, string nInit = null)
@@ -241,17 +240,17 @@ namespace ProjetIA
             if (fermes == "juste" && ouverts == "juste")
             {
                 MessageBox.Show("Bien joué, à la suivante maintenant.");
-                Points += 2;
+                ScoreOF += 2;
             }
             else if (fermes == "juste")
             {
                 MessageBox.Show($"Les nœuds ouverts sont faux, correction :\nFermés : {OuvertsLB.Items[rang].ToString()}\nBon courage pour la ligne suivante !");
-                Points++;
+                ScoreOF++;
             }
             else if (ouverts == "juste")
             {
                 MessageBox.Show($"Les nœuds fermés sont faux, correction :\nFermés : {FermesLB.Items[rang].ToString()}\nBon courage pour la ligne suivante !");
-                Points++;
+                ScoreOF++;
             }
             else
             {
@@ -278,7 +277,7 @@ namespace ProjetIA
         private void ValiderArbreBtn_Click(object sender, EventArgs e)
         {
             bool juste = CompareTreeViews(DijkstraTV.TopNode, treeView1.TopNode);
-            MessageBox.Show(juste ? "égaux" : "différents");
+            MessageBox.Show(juste ? "Votre arbre est juste !" : "Il y a une erreur dans votre arbre.");
             ScoreAF += juste ? 1 : 0;
             ((Button)sender).Enabled = false;
         }
@@ -306,7 +305,7 @@ namespace ProjetIA
                         while (nodes2.MoveNext() && !equals1)
                         {
                             equals1 = CompareTreeViews((TreeNode)nodes1.Current, (TreeNode)nodes2.Current);
-                            Console.WriteLine($"N1 : {((TreeNode)nodes1.Current).Text}   N2 : {((TreeNode)nodes2.Current).Text}   E : {equals1}");
+                            //Console.WriteLine($"N1 : {((TreeNode)nodes1.Current).Text}   N2 : {((TreeNode)nodes2.Current).Text}   E : {equals1}");
                         }
                         if (!equals1) return false;
                         equals &= equals1;
@@ -323,7 +322,7 @@ namespace ProjetIA
                 ValiderBtn.Enabled = true;
             }
 
-            ScoreOF += (int)Math.Ceiling((double)(ScoreOF / FermesLB.Items.Count));
+            ScoreOF += Convert.ToInt32(Math.Ceiling((double)ScoreOF / FermesLB.Items.Count));
         }
 
         private void ValiderArbreBtn_EnabledChanged(object sender, EventArgs e)

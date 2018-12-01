@@ -53,11 +53,11 @@
     <Compile Include="CreerQuestion.Designer.cs">
       <DependentUpon>CreerQuestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="AEtoileSalotti.cs">
+    <Compile Include="Dijkstra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AEtoileSalotti.Designer.cs">
-      <DependentUpon>AEtoileSalotti.cs</DependentUpon>
+    <Compile Include="Dijkstra.Designer.cs">
+      <DependentUpon>Dijkstra.cs</DependentUpon>
     </Compile>
     <Compile Include="Extension.cs" />
     <Compile Include="GenericNode.cs" />
@@ -86,8 +86,8 @@
     <EmbeddedResource Include="CreerQuestion.resx">
       <DependentUpon>CreerQuestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AEtoileSalotti.resx">
-      <DependentUpon>AEtoileSalotti.cs</DependentUpon>
+    <EmbeddedResource Include="Dijkstra.resx">
+      <DependentUpon>Dijkstra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

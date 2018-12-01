@@ -1,6 +1,6 @@
 ﻿namespace ProjetIA
 {
-    partial class AEtoileSalotti
+    partial class Dijkstra
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -64,11 +64,10 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(798, 565);
+            this.treeView1.Location = new System.Drawing.Point(801, 347);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(15, 10);
+            this.treeView1.Size = new System.Drawing.Size(10, 173);
             this.treeView1.TabIndex = 7;
-            this.treeView1.Visible = false;
             // 
             // listBoxgraphe
             // 
@@ -169,6 +168,7 @@
             // 
             // ValiderLigneBtn
             // 
+            this.ValiderLigneBtn.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValiderLigneBtn.Location = new System.Drawing.Point(152, 497);
             this.ValiderLigneBtn.Name = "ValiderLigneBtn";
             this.ValiderLigneBtn.Size = new System.Drawing.Size(166, 23);
@@ -218,6 +218,7 @@
             // 
             // ValiderArbreBtn
             // 
+            this.ValiderArbreBtn.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValiderArbreBtn.Location = new System.Drawing.Point(580, 497);
             this.ValiderArbreBtn.Name = "ValiderArbreBtn";
             this.ValiderArbreBtn.Size = new System.Drawing.Size(80, 23);
@@ -244,9 +245,9 @@
             // 
             // GraphePB
             // 
-            this.GraphePB.Location = new System.Drawing.Point(-8, 59);
+            this.GraphePB.Location = new System.Drawing.Point(-8, 75);
             this.GraphePB.Name = "GraphePB";
-            this.GraphePB.Size = new System.Drawing.Size(838, 259);
+            this.GraphePB.Size = new System.Drawing.Size(838, 243);
             this.GraphePB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.GraphePB.TabIndex = 42;
             this.GraphePB.TabStop = false;
@@ -278,7 +279,7 @@
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.listBox1);
             this.Name = "AEtoileSalotti";
-            this.Text = "Form1";
+            this.Text = "Algorithme Dijkstra";
             ((System.ComponentModel.ISupportInitialize)(this.GraphePB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
