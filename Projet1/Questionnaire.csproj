@@ -53,12 +53,6 @@
     <Compile Include="CreerQuestion.Designer.cs">
       <DependentUpon>CreerQuestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExoDijkstra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExoDijkstra.Designer.cs">
-      <DependentUpon>ExoDijkstra.cs</DependentUpon>
-    </Compile>
     <Compile Include="AEtoileSalotti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +77,14 @@
     <Compile Include="Questionnaire.Designer.cs">
       <DependentUpon>Questionnaire.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SearchTree.cs" />
     <EmbeddedResource Include="CreerQuestion.resx">
       <DependentUpon>CreerQuestion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExoDijkstra.resx">
-      <DependentUpon>ExoDijkstra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AEtoileSalotti.resx">
       <DependentUpon>AEtoileSalotti.cs</DependentUpon>
@@ -96,22 +92,17 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Questionnaire.resx">
       <DependentUpon>Questionnaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="bin\Debug\questions.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="DiagrammeClasses.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,12 +118,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Debug\graphe1.txt" />
+    <Content Include="bin\Debug\graphe0.txt" />
     <Content Include="bin\Debug\questions.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="QuestionsReponses.xml">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Resources\Dijkstra1.jpg" />
+    <None Include="Resources\Dijkstra0.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

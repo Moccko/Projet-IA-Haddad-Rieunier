@@ -40,16 +40,6 @@ namespace ProjetIA
             }
         }
 
-        private void DijkstraBtn_Click(object sender, EventArgs e)
-        {
-            ExoDijkstra questionnaire = new ExoDijkstra();
-            DialogResult result = questionnaire.ShowDialog();
-            if (result == DialogResult.Cancel || result == DialogResult.OK)
-            {
-
-            }
-        }
-
         private void AEtoile_Click(object sender, EventArgs e)
         {
             AEtoileSalotti questionnaire = new AEtoileSalotti();

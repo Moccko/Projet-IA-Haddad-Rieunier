@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ProjetIA.AEtoileSalotti">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAhgiECCCCRiBgEICCBAQECAgCFBAEWAAgCCCAgJEQ=</HashCode>
+      <FileName>AEtoileSalotti.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.CreerQuestion">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECAAIBAAQACAAAACIAAAAICAAAAAAgBgACA=</HashCode>
+      <FileName>CreerQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.Extension">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAAAEAA=</HashCode>
+      <FileName>Extension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.GenericNode">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQwAKAAIAAAAAEAFAQAAAAAAIAAGAAAAAAAAAQASkAA=</HashCode>
+      <FileName>GenericNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.Main" Collapsed="true">
+    <Position X="7" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAABACAAAYAAAAAGAAACAAAAA=</HashCode>
+      <FileName>Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.Node2">
+    <Position X="0.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAAAAAAAAAAEAQAAAAAAAAACAAAAAAEAAAACAAA=</HashCode>
+      <FileName>Node2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.Program" Collapsed="true">
+    <Position X="7" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.Question">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAgAAgAAAAAAAAABQAAAAAAAAAAAA=</HashCode>
+      <FileName>Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.Questionnaire">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABEQEAEDAAEAAAQgGAAAgSwAAEAFAEAAAADAAAAAQ=</HashCode>
+      <FileName>Questionnaire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.SearchTree">
+    <Position X="10.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAABAAEAAAAAgAAAAAAAgAAAAAAAEAAAAABBAAAQCE=</HashCode>
+      <FileName>SearchTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetIA.Properties.Settings" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

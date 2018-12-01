@@ -27,6 +27,10 @@ namespace ProjetIA
 
         private MemoryStream ImageStream;
 
+        private Random Random = new Random();
+
+        private int NumeroQuestionDijkstra;
+
         public Questionnaire()
         {
             InitializeComponent();
@@ -38,7 +42,10 @@ namespace ProjetIA
             reader.Close();
 
             BonnesReponses = 0;
-            NbQuestions = Questions.Count;
+            NbQuestions = Questions.Count + 1;
+
+            NumeroQuestionDijkstra = Random.Next(NbQuestions);
+
             BonnesReponsesLb.Text += $" / {NbQuestions}";
 
             UpdateView();
@@ -88,6 +95,15 @@ namespace ProjetIA
             {
                 ImageStream.Close();
                 ImagePB.Image = null;
+            }
+
+            if (NoQuestion == NumeroQuestionDijkstra)
+            {
+                AEtoileSalotti dijkstra = new AEtoileSalotti();
+                if (dijkstra.DialogResult == DialogResult.OK)
+                {
+                    BonnesReponses += dijkstra.Score;
+                }
             }
 
             // On affiche la question suivante

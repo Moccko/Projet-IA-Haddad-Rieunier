@@ -1,10 +1,14 @@
-nombre de noeuds : 8
-arc1: 0 1 3
-arc2: 0 2 6
-arc3: 0 3 5
-arc4: 2 4 9
-arc5: 3 5 5
-arc6: 4 6 4
-arc7: 4 5 3
-arc8: 6 7 4
-arc9: 5 6 4
+nombre de noeuds : 7
+initial : 2
+final : 0
+arc1: 0 1 2
+arc2: 1 2 9
+arc3: 2 3 2
+arc4: 3 4 4
+arc5: 4 0 4
+arc6: 3 0 9
+arc7: 3 5 3
+arc8: 2 5 6
+arc9: 2 6 2
+arc10: 3 5 6
+arc11: 0 5 6
