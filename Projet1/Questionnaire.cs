@@ -91,7 +91,7 @@ namespace ProjetIA
 
         private void UpdateScore()
         {
-            // +2 pour l'exo Dijkstra
+            // +3 pour l'exo Dijkstra
             BonnesReponsesLb.Text = (BonnesReponses > 1 ? $"{BonnesReponses} bonnes réponses" : $"{BonnesReponses} bonne réponse") + $" / {NbQuestions + 3}";
         }
 
@@ -153,13 +153,13 @@ namespace ProjetIA
                     }
                     else if ((double)BonnesReponses / NbQuestions > 0.5)
                     {
-                        greeting = "Mouais, pas mal, peut mieux faire.";
+                        greeting = "Pas mal, peut mieux faire.";
                     }
                     else
                     {
-                        greeting = "Qu'est-ce que c'est que ça ?! Tu vas me faire le plaisir de relire le cours de M. Salotti.";
+                        greeting = "Qu'est-ce que c'est que ça ?! Vous allez me faire le plaisir de relire le cours de M. Salotti.";
                     }
-                    MessageBox.Show($"{greeting} Votre score est de {BonnesReponses}/{NbQuestions}.");
+                    MessageBox.Show($"{greeting} Votre score est de {BonnesReponses}/{NbQuestions + 3}.");
                     this.DialogResult = DialogResult.OK;
                 }
             }
