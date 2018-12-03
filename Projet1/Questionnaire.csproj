@@ -122,9 +122,6 @@
     <Content Include="bin\Debug\questions.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="QuestionsReponses.xml">
-      <SubType>Designer</SubType>
-    </Content>
     <None Include="Resources\Dijkstra1.jpg" />
     <None Include="Resources\Dijkstra0.jpg" />
   </ItemGroup>

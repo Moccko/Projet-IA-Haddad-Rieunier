@@ -110,7 +110,7 @@ namespace ProjetIA
                 Dijkstra dijkstra = new Dijkstra();
                 if (dijkstra.ShowDialog() == DialogResult.OK)
                 {
-                    NoQuestionLb.Text = $"Question {NoQuestion += 2} sur {NbQuestions}";
+                    NoQuestionLb.Text = $"Question {++NoQuestion} sur {NbQuestions + 1}";
                     BonnesReponses += dijkstra.Score;
                     UpdateScore();
                 }
@@ -119,7 +119,7 @@ namespace ProjetIA
 
             // On affiche la question suivante
             QuestionEnCours = Questions.Dequeue();
-            NoQuestionLb.Text = $"Question {++NoQuestion} sur {NbQuestions}";
+            NoQuestionLb.Text = $"Question {++NoQuestion} sur {NbQuestions + 1}";
             ConsigneLb.Text = QuestionEnCours.Consigne;
             ReponsesCLB.Items.AddRange(QuestionEnCours.Reponses.ToArray());
             CodeLb.Text = QuestionEnCours.Code;
